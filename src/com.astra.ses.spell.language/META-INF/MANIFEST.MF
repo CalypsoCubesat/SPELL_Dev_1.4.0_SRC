@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SPELL Language Support
+Bundle-SymbolicName: com.astra.ses.spell.language;singleton:=true
+Bundle-Version: 4.6.1.qualifier
+Bundle-Activator: com.astra.ses.spell.language.Activator
+Bundle-Vendor: SES Engineering, Luxembourg S.a.r.l.
+Require-Bundle: org.eclipse.core.runtime,
+ org.python.pydev.parser,
+ org.python.pydev,
+ org.eclipse.text,
+ org.python.pydev.core,
+ org.eclipse.core.resources,
+ com.google.guava,
+ org.eclipse.swt,
+ org.python.pydev.shared_ui
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: com.astra.ses.spell.language,
+ com.astra.ses.spell.language.beautifier

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="lu.ses.engineering.spell.revisiontools.feature"
+      label="Spell Tools Feature"
+      version="0.0.4"
+      provider-name="SES">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.core.expressions"/>
+      <import plugin="org.eclipse.swt"/>
+      <import plugin="org.eclipse.equinox.registry"/>
+      <import plugin="com.google.guava"/>
+      <import feature="lu.ses.engineering.depend.feature" version="1.0.0.qualifier"/>
+      <import plugin="com.astra.ses.spell.dev.database"/>
+   </requires>
+
+   <plugin
+         id="lu.ses.engineering.spell.revisiontools"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="lu.ses.engineering.spell.controlflow"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="lu.ses.engineering.spell.refactoring.RefactoringDefinition"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.jcraft.jsch"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

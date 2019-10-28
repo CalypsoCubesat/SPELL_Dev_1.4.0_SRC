@@ -1,0 +1,7 @@
+
+process(xtext::GeneratedMetamodel this):
+    ePackage.getEClassifier('refactorMapEntry').setInstanceClassName('java.util.Map$Entry')->
+    ePackage.getEClassifier('argRefactorMapEntry').setInstanceClassName('java.util.Map$Entry')
+   
+    
+;

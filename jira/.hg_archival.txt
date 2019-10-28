@@ -1,0 +1,6 @@
+repo: 51d47f66701124048a4cecf347a2a1bc1d8cb922
+node: 8af33d37a6d8239ff02bc4f108d7b7168700f317
+branch: rest
+latesttag: 3.0.5
+latesttagdistance: 366
+changessincelatesttag: 396

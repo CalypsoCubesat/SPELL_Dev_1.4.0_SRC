@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<fragment>
+   <extension
+         point="com.astra.ses.spell.dev.scheck.StatickRuleChecker">
+      <StaticRuleChecker
+            class="com.astra.ses.spell.dev.scheck.dictionaries.DictionaryChecker"
+            description="Static checker for data dictionaries"
+            id="com.astra.ses.spell.dev.scheck.dictionaries">
+      </StaticRuleChecker>
+   </extension>
+
+</fragment>

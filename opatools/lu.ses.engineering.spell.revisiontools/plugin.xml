@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="lu.ses.engineering.spell.revisiontools.category1"
+            defaultHandler="lu.ses.engineering.spell.revisiontools.abort.AbortScriptCommandHandler"
+            id="lu.ses.engineering.spell.revisiontools.AbortCommand"
+            name="Abort Python Checker">
+      </command>
+      <category
+            id="lu.ses.engineering.spell.revisiontools.category1"
+            name="Revision Tools">
+      </category>
+      <command
+            defaultHandler="lu.ses.engineering.spell.revisiontools.checkhandler.SCDBChecker"
+            id="lu.ses.engineering.spell.revisiontools.SpellProcCheck"
+            name="Spell Proc Check">
+      </command>
+      <command
+            defaultHandler="lu.ses.engineering.spell.revisiontools.checkhandler.ReportingConsistencyChecker"
+            id="lu.ses.engineering.spell.revisiontools.ReportingHeadercheck"
+            name="Reporting Spell Header Check">
+      </command>
+      <command
+            defaultHandler="lu.ses.engineering.spell.revisiontools.checkhandler.CorrectingConsistencyChecker"
+            id="lu.ses.engineering.spell.revisiontools.CorrectingHeaderCheck"
+            name="Correcting Spell Header Check">
+      </command>
+      <command
+            defaultHandler="lu.ses.engineering.spell.revisiontools.checkhandler.RevisionChecker"
+            id="lu.ses.engineering.spell.revisiontools.RevChecker"
+            name="SPELL Revision Check">
+         <commandParameter
+               id="lu.ses.engineering.spell.revisiontools.RevCompareParam"
+               name="RevCompare"
+               optional="true">
+            <values
+                  class="lu.ses.engineering.spell.revisiontools.RevCompareValues">
+            </values>
+         </commandParameter>
+         <state
+               class="org.eclipse.ui.handlers.RegistryToggleState:true"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command>
+      <command
+            defaultHandler="lu.ses.engineering.spell.revisiontools.checkhandler.RevisionChecker"
+            id="lu.ses.engineering.spell.revisiontools.RevDateChecker"
+            name="SPELL Revision Check">
+         <commandParameter
+               id="lu.ses.engineering.spell.revisiontools.RevCompareParam"
+               name="RevCompare"
+               optional="true">
+            <values
+                  class="lu.ses.engineering.spell.revisiontools.RevCompareValues">
+            </values>
+         </commandParameter>
+         <state
+               class="org.eclipse.ui.handlers.RegistryToggleState:false"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command>
+      <command
+            defaultHandler="lu.ses.engineering.spell.revisiontools.checkhandler.RevisionChecker"
+            id="lu.ses.engineering.spell.revisiontools.RevDateContentChecker"
+            name="SPELL Revision Check">
+         <commandParameter
+               id="lu.ses.engineering.spell.revisiontools.RevCompareParam"
+               name="RevCompare"
+               optional="true">
+            <values
+                  class="lu.ses.engineering.spell.revisiontools.RevCompareValues">
+            </values>
+         </commandParameter>
+         <state
+               class="org.eclipse.ui.handlers.RegistryToggleState:false"
+               id="org.eclipse.ui.commands.toggleState">
+         </state>
+      </command>
+      <command
+            defaultHandler="lu.ses.engineering.spell.revisiontools.checkhandler.SpellRevisionChecker"
+            id="lu.ses.engineering.spell.revisiontools.SpellRevisionChecker"
+            name="SPELL Revision Check">
+      </command>
+      <command
+            defaultHandler="lu.ses.engineering.spell.revisiontools.checkhandler.DeployFilesAuto"
+            description="Deploy files to Satellite (Automatic)"
+            id="lu.ses.engineering.spell.revisiontools.DeployAuto"
+            name="Deploy files to Satellite (Automatic)">
+      </command>
+      <command
+            defaultHandler="lu.ses.engineering.spell.revisiontools.checkhandler.DeployFilesManually"
+            description="Deploy files to Satellite (Manual)"
+            id="lu.ses.engineering.spell.revisiontools.DeployMan"
+            name="Deploy files to Satellite (Manual)">
+      </command>
+      <command
+            defaultHandler="lu.ses.engineering.spell.revisiontools.checkhandler.DeployFilesAutoSimOnly"
+            description="Deploy files to Satellite (Automatic SIM only)"
+            id="lu.ses.engineering.spell.revisiontools.DeployAutoSimOnly"
+            name="Deploy files to Satellite (Automatic SIM only)">
+      </command>
+      <command
+            defaultHandler="lu.ses.engineering.spell.revisiontools.checkhandler.RefactorSPELLHeader"
+            id="lu.ses.engineering.spell.revisiontools.RefactorSPELLHeader"
+            name="Refactor SPELL Header">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.console.ConsoleView?before=launchGroup">
+         <command
+               commandId="lu.ses.engineering.spell.revisiontools.AbortCommand"
+               disabledIcon="icons/dlcl16/terminate_co.png"
+               hoverIcon="icons/elcl16/terminate_co.png"
+               icon="icons/elcl16/terminate_co.png"
+               label="Abort Running Script"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any">
+         <menu
+               id="SPELL Tools"
+               label="SPELL Tools">
+            <dynamic
+                  class="lu.ses.engineering.spell.revisiontools.VariousScripts"
+                  id="lu.ses.engineering.spell.revisiontools.variousScripts">
+               <visibleWhen
+                     checkEnabled="true">
+               </visibleWhen>
+            </dynamic>
+            <visibleWhen>
+               <with
+                     variable="selection">
+                  <iterate
+                        ifEmpty="false"
+                        operator="or">
+                     <instanceof
+                           value="org.eclipse.core.resources.IResource">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="com.astra.ses.spell.dev.preferences"
+            class="lu.ses.engineering.spell.revisiontools.preferences.SPELLToolsPreferencePage"
+            id="lu.ses.engineering.spell.revisiontools.SpellToolsPrefs"
+            name="SPELL Tools">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="lu.ses.engineering.spell.revisiontools.preferences.SPELLToolsPreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="lu.ses.engineering.spell.revisiontools.SpellDevFixer">
+      </startup>
+   </extension>
+   <extension
+         id="lu.ses.engineering.spell.marker.MissingTM"
+         name="Missing TM Marker"
+         point="org.eclipse.core.resources.markers">
+      <persistent
+            value="true">
+      </persistent>
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <super
+            type="org.eclipse.core.resources.textmarker">
+      </super>
+      <attribute
+            name="owner">
+      </attribute>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="com.astra.ses.spell.dev.views"
+            class="lu.ses.engineering.spell.revisiontools.ui.ActivityDiagramView"
+            id="lu.ses.engineering.spell.revisiontools.ActivityDiagramView"
+            name="ActivityDiagramView"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="com.astra.ses.spell.dev.perspective.development">
+         <viewShortcut
+               id="lu.ses.engineering.spell.revisiontools.ActivityDiagramView">
+         </viewShortcut>
+         <view
+               id="lu.ses.engineering.spell.revisiontools.ActivityDiagramView"
+               minimized="false"
+               moveable="true"
+               relationship="stack"
+               relative="org.eclipse.ui.views.ContentOutline"
+               showTitle="true"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+ 
+
+</plugin>

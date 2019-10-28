@@ -1,0 +1,132 @@
+/**
+ */
+package lu.ses.engineering.spell.spellDatabase;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Astrium Header Entry</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link lu.ses.engineering.spell.spellDatabase.AstriumHeaderEntry#getName <em>Name</em>}</li>
+ *   <li>{@link lu.ses.engineering.spell.spellDatabase.AstriumHeaderEntry#getAstriumTime <em>Astrium Time</em>}</li>
+ *   <li>{@link lu.ses.engineering.spell.spellDatabase.AstriumHeaderEntry#getValue <em>Value</em>}</li>
+ *   <li>{@link lu.ses.engineering.spell.spellDatabase.AstriumHeaderEntry#getSimpleValue <em>Simple Value</em>}</li>
+ * </ul>
+ *
+ * @see lu.ses.engineering.spell.spellDatabase.SpellDatabasePackage#getAstriumHeaderEntry()
+ * @model
+ * @generated
+ */
+public interface AstriumHeaderEntry extends EObject
+{
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see lu.ses.engineering.spell.spellDatabase.SpellDatabasePackage#getAstriumHeaderEntry_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link lu.ses.engineering.spell.spellDatabase.AstriumHeaderEntry#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Astrium Time</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Astrium Time</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Astrium Time</em>' attribute.
+   * @see #setAstriumTime(String)
+   * @see lu.ses.engineering.spell.spellDatabase.SpellDatabasePackage#getAstriumHeaderEntry_AstriumTime()
+   * @model
+   * @generated
+   */
+  String getAstriumTime();
+
+  /**
+   * Sets the value of the '{@link lu.ses.engineering.spell.spellDatabase.AstriumHeaderEntry#getAstriumTime <em>Astrium Time</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Astrium Time</em>' attribute.
+   * @see #getAstriumTime()
+   * @generated
+   */
+  void setAstriumTime(String value);
+
+  /**
+   * Returns the value of the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Value</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Value</em>' containment reference.
+   * @see #setValue(Atom)
+   * @see lu.ses.engineering.spell.spellDatabase.SpellDatabasePackage#getAstriumHeaderEntry_Value()
+   * @model containment="true"
+   * @generated
+   */
+  Atom getValue();
+
+  /**
+   * Sets the value of the '{@link lu.ses.engineering.spell.spellDatabase.AstriumHeaderEntry#getValue <em>Value</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Value</em>' containment reference.
+   * @see #getValue()
+   * @generated
+   */
+  void setValue(Atom value);
+
+  /**
+   * Returns the value of the '<em><b>Simple Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Simple Value</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Simple Value</em>' attribute.
+   * @see #setSimpleValue(String)
+   * @see lu.ses.engineering.spell.spellDatabase.SpellDatabasePackage#getAstriumHeaderEntry_SimpleValue()
+   * @model
+   * @generated
+   */
+  String getSimpleValue();
+
+  /**
+   * Sets the value of the '{@link lu.ses.engineering.spell.spellDatabase.AstriumHeaderEntry#getSimpleValue <em>Simple Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Simple Value</em>' attribute.
+   * @see #getSimpleValue()
+   * @generated
+   */
+  void setSimpleValue(String value);
+
+} // AstriumHeaderEntry

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/lu.ses.engineering.spell.SpellDatabase/src-gen"
+    editDirectory="/lu.ses.engineering.spell.SpellDatabase.edit/src" editorDirectory="/lu.ses.engineering.spell.SpellDatabase.editor/src"
+    modelPluginID="lu.ses.engineering.spell.SpellDatabase" forceOverwrite="true" modelName="SpellDatabase"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="lu.ses.engineering.spell.SpellDatabase.edit"
+    editorPluginID="lu.ses.engineering.spell.SpellDatabase.editor" runtimeVersion="2.14">
+  <genPackages prefix="SpellDatabase" basePackage="lu.ses.engineering.spell" disposableProviderFactory="true"
+      fileExtensions="DB,imp,db,IMP" ecorePackage="SpellDatabase.ecore#/">
+    <genClasses ecoreClass="SpellDatabase.ecore#//SpellDatabase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//SpellDatabase/databaseEntry"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//AstriumDatabase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//AstriumDatabase/entries"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//AstriumVariableEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//AstriumVariableEntry/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//AstriumVariableEntry/astriumTime"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//AstriumVariableEntry/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//AstriumVariableEntry/simpleValue"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//AstriumHeaderEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//AstriumHeaderEntry/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//AstriumHeaderEntry/astriumTime"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//AstriumHeaderEntry/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//AstriumHeaderEntry/simpleValue"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//CSVEntry"/>
+    <genClasses ecoreClass="SpellDatabase.ecore#//CSVCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//CSVCommand/command"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//CSVCommand/args"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//TCArgs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//TCArgs/tcName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//TCArgs/tcValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//TCArgs/tcMod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//TCArgs/tolerance"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//CSVTelemetry">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//CSVTelemetry/tmArg"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//CSVSpell">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//CSVSpell/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//SpellCommand"/>
+    <genClasses ecoreClass="SpellDatabase.ecore#//DatabaseEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//DatabaseEntry/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//DatabaseEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//DatabaseValue"/>
+    <genClasses ecoreClass="SpellDatabase.ecore#//Lambda_Stmt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//Lambda_Stmt/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//ComplexValue"/>
+    <genClasses ecoreClass="SpellDatabase.ecore#//Tuple">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//Tuple/values"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//List">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//List/values"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//Dictionary"/>
+    <genClasses ecoreClass="SpellDatabase.ecore#//DictionaryEntry">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//DictionaryEntry/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//DictionaryEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//Atom">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//Atom/val"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//RelDate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//RelDate/val"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//Date">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//Date/val"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//Boolean"/>
+    <genClasses ecoreClass="SpellDatabase.ecore#//StringValue"/>
+    <genClasses ecoreClass="SpellDatabase.ecore#//Number">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//Number/valInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//Number/valStr"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//AstriumSpellDatabase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//AstriumSpellDatabase/database"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//CSVFile">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//CSVFile/csvEntries"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//AstriumVariableComment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//AstriumVariableComment/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//AstriumHeaderComment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//AstriumHeaderComment/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//WaitCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//WaitCommand/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellDatabase.ecore#//WaitCommand/unit"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellDatabase.ecore#//PauseCommand"/>
+    <genClasses ecoreClass="SpellDatabase.ecore#//Dicitonary">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellDatabase.ecore#//Dicitonary/entries"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

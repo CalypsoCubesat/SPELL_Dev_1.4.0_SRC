@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+>
+   <extension
+         id="com.astra.ses.spell.dev.database.DatabaseInterfaceHifly"
+         name="Hifly Database Interface"
+         point="com.astra.ses.spell.dev.database.DatabaseInterface">
+      <DatabaseInterface
+            class="com.astra.ses.spell.dev.database.webapi.WebAPIDatabaseDriver"
+            description="Redis WebAPI database driver"
+            name="Redis WebAPI Database Interface">
+      </DatabaseInterface>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated DBModel -->
+      <package
+            uri="http://www.ses.com/webAPI/dbModel"
+            class="com.astra.ses.spell.dev.database.webapi.dbModel.DbModelPackage"
+            genModel="dbmodel/DBModel.genmodel"/>
+   </extension>
+   <extension
+         point="org.python.pydev.pydev_hover2">
+      <pyTextHover
+            activate="true"
+            class="com.astra.ses.spell.dev.database.webapi.TMTCparameterHoverParticipant"
+            enable="true"
+            id="com.astra.ses.spell.dev.database.webapi.SpellTMTCHover"
+            label="TMTC Hover"
+            preempt="true"
+            priority="100">
+      </pyTextHover>
+   </extension>
+
+</plugin>

@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Taskflow Utils
+Bundle-SymbolicName: lu.ses.engineering.spell.taskflow;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.core.resources;bundle-version="3.11.1",
+ lu.ses.engineering.spell.controlflow;bundle-version="1.0.1",
+ org.eclipse.osgi,
+ org.eclipse.platform;bundle-version="4.6.2",
+ org.eclipse.ui;bundle-version="3.108.1",
+ lu.ses.engineering.spell.refactoring.RefactoringDefinition;bundle-version="1.0.1",
+ org.eclipse.core.runtime;bundle-version="3.12.0",
+ com.astra.ses.spell.dev.database;bundle-version="4.6.1";resolution:=optional
+Bundle-Activator: lu.ses.engineering.spell.taskflow.Activator
+Export-Package: lu.ses.engineering.spell.flow_analysis,
+ lu.ses.engineering.spell.taskflow.digraph
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

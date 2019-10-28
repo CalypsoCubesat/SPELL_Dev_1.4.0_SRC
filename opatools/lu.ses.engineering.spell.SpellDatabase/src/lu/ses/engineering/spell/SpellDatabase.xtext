@@ -1,0 +1,267 @@
+grammar lu.ses.engineering.spell.SpellDatabase  hidden( ML_COMMENT, SL_COMMENT)
+												
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate spellDatabase "http://www.ses.lu/engineering/spell/SpellDatabase"
+
+SpellDatabase hidden(ANY_OTHER,WS,ML_COMMENT, SL_COMMENT):
+	SkipNLAndComments
+	(({AstriumSpellDatabase} 'FILE_HEADER' SkipNLAndComments database=AstriumDatabase) |
+	({SpellDatabase} (databaseEntry+=DatabaseEntry 
+		(SkipNLAndComments2 databaseEntry+=DatabaseEntry? )*
+		SkipNLAndComments
+	)) |
+	({CSVFile} csvEntries+=CSVEntry SkipNLAndComments2?
+		(SkipNLAndComments2? =>csvEntries+=CSVEntry )*
+		SkipNLAndComments	
+	))
+;
+
+AstriumDatabase hidden(WS,ML_COMMENT, SL_COMMENT):
+	{AstriumDatabase}
+	(entries += AstriumHeaderEntry SkipNLAndComments)*
+	'END_FILE_HEADER' SkipNLAndComments
+	(entries += AstriumVariableEntry SkipNLAndComments)*
+;
+AstriumVariableEntry hidden(WS,ML_COMMENT, SL_COMMENT):
+	({AstriumVariableComment} comment=ASTRIUM_COMMENT ) |
+	({AstriumVariableEntry}  DOLLAR name=ASTRIUM_ID COLON'=' ( =>astriumTime=ASTRIUM_TIME | =>value=Atom | simpleValue=SINGLE_VALUE)? )
+;
+
+AstriumHeaderEntry hidden(WS,ML_COMMENT, SL_COMMENT):
+	({AstriumHeaderComment} comment=ASTRIUM_COMMENT ) |
+	({AstriumHeaderEntry}  name=ASTRIUM_ID COLON'=' (=>astriumTime=ASTRIUM_TIME | =>value=Atom | simpleValue=SINGLE_VALUE)? )
+;
+
+SkipNLAndComments2 hidden(WS,ML_COMMENT, SL_COMMENT):
+	NL+
+	=>SkipNLAndComments
+; 
+
+SkipNLAndComments hidden():
+	(WS|ML_COMMENT|SL_COMMENT|NL)*
+;
+
+CSVEntry:
+	CSVCommand |
+	(CSVTelemetry) |
+	(CSVSpell)
+;
+
+CSVCommand hidden(WS,ML_COMMENT, SL_COMMENT):
+	CMD ',' command=ID_STMT 
+		(',' =>args+=TCArgs 
+			=>(SkipNLAndComments2 ','',' =>args+=TCArgs ','*)*
+		)? ','*
+		
+;
+
+TCArgs hidden(WS,ML_COMMENT, SL_COMMENT):
+	=>tcName=TCValue ',' =>tcValue=TCValue ',' =>tcMod=(STATE_EXPR) =>(',' tolerance=PosIntOrFloat?)? ','*
+;
+
+TCValue returns ecore::EString hidden(ML_COMMENT, SL_COMMENT):
+	(ID_STMT|BIN_HEX_OCT|PLUS|MINUS|=>INTEGER|=>FLOAT|'*'|BOOL_EXPR)+
+;
+
+KeyValue returns ecore::EString hidden(ML_COMMENT, SL_COMMENT):
+	(ID_STMT|BIN_HEX_OCT|PLUS|MINUS|=>INTEGER|=>FLOAT|'*'|=>STRING|BOOL_EXPR)+
+;
+
+
+CSVTelemetry hidden(WS,ML_COMMENT, SL_COMMENT):
+	TM ',' ',' =>tmArg=TCArgs ','*
+;
+
+CSVSpell hidden(WS,ML_COMMENT, SL_COMMENT):
+	SPELL ',' =>cmd=SpellCommand ','*
+;
+
+SpellCommand hidden(WS,ML_COMMENT, SL_COMMENT):
+	({WaitCommand}WAIT ',' =>value=IntOrFloat ',' =>unit=(TIME_EXPR) ) |
+	({PauseCommand}PAUSE ','*)
+;
+IntOrFloat returns ecore::EString:
+	FLOAT_Val|INTEGER
+;
+PosIntOrFloat returns ecore::EString:
+	FLOAT|INT
+;	
+DatabaseEntry hidden(WS,ML_COMMENT, SL_COMMENT):
+	name=(KeyValue) WS? Skipped_NL  WS? (value=DatabaseValue)?
+;
+
+DatabaseValue :
+	ComplexValue | 
+	=>RelDate |
+	=>Date |
+	=>Atom 
+	
+;
+
+Lambda_Stmt:
+    {Lambda_Stmt}	LAMBDA (variables=Lambda_Vars)? COLON (val=Lambda_Function)?
+;
+Lambda_Function returns ecore::EString hidden(ANY_OTHER,WS):
+	(Lambda_Partial_Func)+
+
+	
+;
+Lambda_Partial_Func returns ecore::EString hidden(ANY_OTHER,WS):
+	(ID|FLOAT|INT|PLUS|MINUS|ML_COMMENT|BIN_HEX_OCT|BOOL_EXPR|STRING|ANY_OTHER ) |
+		(LAMBDA (Lambda_Vars)? COLON (Lambda_Function)?)
+;
+Lambda_Vars returns ecore::EString hidden(ANY_OTHER,WS):
+	ID (',' ID)*
+;
+
+ComplexValue :
+	Dictionary |
+	List |
+	Tuple
+;
+Tuple hidden(WS,ML_COMMENT, SL_COMMENT):
+	{Tuple} '(' 
+	(Skipped_NL values+=(Atom|ComplexValue) Skipped_NL 
+		(',' Skipped_NL values+=(Atom|ComplexValue))*
+	)? Skipped_NL ','? Skipped_NL ')'
+;
+
+
+List hidden(WS,ML_COMMENT, SL_COMMENT):
+	{List} '[' 
+	(Skipped_NL values+=(Atom|ComplexValue) Skipped_NL 
+		(',' Skipped_NL values+=(Atom|ComplexValue))*
+	)? Skipped_NL ','? Skipped_NL ']'
+;
+
+Dictionary hidden(WS,ML_COMMENT, SL_COMMENT):
+	{Dicitonary} '{'
+	(Skipped_NL entries+=DictionaryEntry Skipped_NL
+		(',' Skipped_NL entries+=DictionaryEntry Skipped_NL)*		
+	)? Skipped_NL ','? Skipped_NL '}'
+;
+
+DictionaryEntry  hidden(WS,ML_COMMENT, SL_COMMENT):
+	 key=(Atom|ComplexValue) Skipped_NL (COLON Skipped_NL value=(Atom|ComplexValue))?
+;
+
+Atom :
+	Number |
+	StringValue |
+	Boolean |
+	Lambda_Stmt
+;
+
+RelDate :
+	=>val=(RELTIME)
+;
+
+Date :
+	=>val=(ABSTIME)
+;
+
+
+Boolean:
+	val=BOOL_EXPR
+;
+
+
+StringValue:
+	val=STRING
+;
+
+Number:
+	val=BIN_HEX_OCT |
+	(valInt=INTEGER)  |
+	=>valStr=FLOAT_Val
+;
+FLOAT_Val returns ecore::EString hidden():
+	(PLUS|MINUS)? FLOAT
+;
+Skipped_NL hidden(WS):
+	('\\' NL)*
+;
+
+RELTIME returns ecore::EString hidden(WS):
+	 INTEGER (
+	 	(INT COLON INT COLON INT) |
+	 	(COLON INT COLON INT)
+	 )
+;
+ABSTIME returns ecore::EString hidden():
+	((INT MINUS (INT|ID_STMT) MINUS INT)(COLON|WS)(INT COLON INT (COLON INT)?)?) |
+	((INT '/' (INT|ID) '/' INT)(COLON|WS)(INT COLON INT (COLON INT)?)?) 
+;
+
+SINGLE_VALUE returns ecore::EString hidden(WS): 
+	(ID|FLOAT|INT|PLUS|MINUS|ML_COMMENT|BIN_HEX_OCT|BOOL_EXPR|STRING|ANY_OTHER|'.')+
+;
+ID_STMT returns ecore::EString hidden(): 
+	ID (ID | '\\' | '/')*
+	
+;
+
+ASTRIUM_ID returns ecore::EString hidden(WS):
+		ID (ID)*
+;
+ASTRIUM_TIME returns ecore::EString hidden(WS):
+	((ID '.')? INT ID INT)? INT COLON INT COLON INT
+;
+terminal ASTRIUM_COMMENT :
+	'*''*' !('\n'|'\r')*
+;
+
+INTEGER returns ecore::EInt hidden():(PLUS|MINUS)?  INT;
+
+terminal PLUS :
+	'+'
+;
+terminal MINUS:
+	'-'
+;
+terminal WS			: (' '|'\t')+;
+
+terminal COLON : ':';
+terminal LAMBDA : 'lambda';
+terminal TM : 'TM';
+terminal BOOL_EXPR : ('True'|'False'|'None');
+terminal TIME_EXPR: 'SECOND'|'MINUTE'|'HOUR'|'DAY'|'WEEK';
+terminal SPELL : 'SPELL';
+terminal WAIT : 'WAIT';
+terminal PAUSE : 'PAUSE';
+terminal CMD : 'CMD';
+terminal STATE_EXPR:'STATE'|'ENG'|'RAW';
+
+terminal FLOAT returns ecore::EString:
+	(INT ('.' INT)  (('e'|'E') ('+'|'-')? INT?)?) |
+	(INT ('.' INT)?  (('e'|'E') ('+'|'-')? INT?))
+;
+
+terminal INT returns ecore::EInt: ('0'..'9')+;
+
+
+
+
+terminal ID  		: (('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*)
+;
+
+
+
+terminal DOLLAR: '$';
+
+terminal BIN_HEX_OCT:
+	('0'('x'|'X') ('0'..'9'|'a'..'f'|'A'..'F')+ ) |
+	('0'('b'|'B') ('0'..'1')+ ) |
+	('0'('o'|'O') ('0'..'7')+ )
+;
+
+terminal STRING	: 
+			'"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
+			"'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'"|"\n" ))* "'"
+		; 
+terminal ML_COMMENT	: ("'''" -> "'''" ) | ('"""' -> '"""');
+terminal SL_COMMENT 	: '#' !('\n'|'\r')*;
+
+terminal NL			: ('\r'|'\n')+ ;
+terminal ANY_OTHER: .;

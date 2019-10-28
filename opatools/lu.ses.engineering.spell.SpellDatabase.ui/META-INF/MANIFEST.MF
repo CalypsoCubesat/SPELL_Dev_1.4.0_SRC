@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: lu.ses.engineering.spell.SpellDatabase.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.3.qualifier
+Bundle-SymbolicName: lu.ses.engineering.spell.SpellDatabase.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: lu.ses.engineering.spell.SpellDatabase;visibility:=reexport,
+ org.eclipse.xtext.ui,
+ org.eclipse.ui.editors,
+ org.eclipse.ui.ide,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.ui,
+ org.eclipse.xtext.builder,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types.ui,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.compare,
+ com.astra.ses.spell.dev.database;resolution:=optional,
+ com.astra.ses.spell.dev;bundle-version="1.0.0";resolution:=optional,
+ com.astra.ses.spell.dev.config;bundle-version="1.0.0";resolution:=optional,
+ com.astra.ses.spell.dev.database.ui;bundle-version="1.0.0";resolution:=optional,
+ com.astra.ses.spell.dev.spelleditor;bundle-version="1.0.0";resolution:=optional,
+ org.eclipse.xtext.xbase.lib
+Import-Package: org.apache.log4j,
+ org.eclipse.xtext.xbase.lib
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: lu.ses.engineering.spell.ui.quickfix,
+ lu.ses.engineering.spell.ui.contentassist,
+ lu.ses.engineering.spell.ui.contentassist.antlr,
+ lu.ses.engineering.spell.ui.internal
+Bundle-Activator: lu.ses.engineering.spell.ui.internal.SpellDatabaseActivator

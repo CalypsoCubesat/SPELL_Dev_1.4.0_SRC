@@ -1,0 +1,27 @@
+grammar lu.ses.engineering.spell.refactoring.RefactoringDefinition
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate refactoringDefinition "http://www.ses.lu/engineering/spell/refactoring/RefactoringDefinition"
+
+Refactorings:
+	( refactorings+=refactorMapEntry )+
+;
+	
+refactorMapEntry:
+	key=VALUE WS value=VALUE NL?;
+
+argRefactorMapEntry:
+	key=argRefactor WS value=VALUE NL?;
+	
+argRefactor :
+	mnem=VALUE WS raw=VALUE
+;
+
+terminal WS			: ('\t')+;
+terminal NL         : ('\r'|'\n')+;
+terminal VALUE	returns ecore::EString: 
+		(  !('\t'|'\r'|'\n') )*
+; 
+
+		

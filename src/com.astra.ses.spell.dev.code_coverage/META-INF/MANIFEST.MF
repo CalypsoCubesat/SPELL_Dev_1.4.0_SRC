@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SPELL Code Coverage
+Bundle-SymbolicName: com.astra.ses.spell.dev.code_coverage;singleton:=true
+Bundle-Version: 4.6.1.qualifier
+Require-Bundle: com.astra.ses.spell.dev.spelleditor;bundle-version="1.0.0",
+ org.eclipse.core.runtime,
+ org.eclipse.ui.editors,
+ org.eclipse.core.commands,
+ org.eclipse.ui,
+ org.eclipse.core.expressions,
+ org.eclipse.jface,
+ com.jcraft.jsch;bundle-version="0.1.50",
+ org.eclipse.core.resources;bundle-version="3.9.0",
+ org.eclipse.ui.workbench,
+ org.eclipse.core.jobs,
+ org.eclipse.egit.core,
+ org.eclipse.jgit,
+ org.python.pydev.parser,
+ org.eclipse.ui.ide
+Bundle-Vendor: SES Engineering, Luxembourg S.a.r.l.
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: com.astra.ses.spell.code_coverage.Activator
+Export-Package: com.astra.ses.spell.code_coverage,
+ com.astra.ses.spell.code_coverage.ui,
+ com.astra.ses.spell.code_coverage.ui.commands

@@ -1,0 +1,3 @@
+[submodule "spell-import-wizard"]
+	path = spell-import-wizard
+	url = git@bzengrcs1.eng.ses:spell/spell-dev/wizard

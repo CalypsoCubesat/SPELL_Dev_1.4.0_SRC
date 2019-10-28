@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.gmv.es/views" xmlns="http://www.gmv.es/views">
+  
+  <xsd:include schemaLocation="displaydefinition.xsd"/>
+    
+  <xsd:complexType name = "row">
+    <xsd:attribute name = "type"           type = "xsd:string"/>
+    <xsd:attribute name = "title"          type = "xsd:string"/>
+    <xsd:attribute name = "name"           type = "xsd:string"/>
+    <xsd:attribute name = "representation" type = "xsd:string"/>
+    <xsd:attribute name = "note" 		   type = "xsd:string" default=""/>
+  </xsd:complexType>
+
+  <xsd:complexType name = "and_column">
+    <xsd:attribute name = "name"           type = "xsd:string"/>
+    <xsd:attribute name = "visible"        type = "xsd:string"	default="true"/>
+    <xsd:attribute name = "width"          type = "xsd:int" 	default="1"/>
+  </xsd:complexType>
+
+    
+  <xsd:complexType name="xmltabulardisplaydefinition">
+    <xsd:complexContent>
+      <xsd:extension base="xmldisplaydefinition">
+        <xsd:sequence>
+          <xsd:element name="scrollable" type="xsd:boolean" default="false"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="1" name="column" type="and_column"/>
+	  <xsd:element maxOccurs="unbounded" minOccurs="1" name="row" type="row"/>
+        </xsd:sequence>
+      </xsd:extension>  
+    </xsd:complexContent>  
+  </xsd:complexType>
+  
+
+    <xsd:element name="xmltabulardisplaydefinition" type="xmltabulardisplaydefinition"></xsd:element>
+</xsd:schema>

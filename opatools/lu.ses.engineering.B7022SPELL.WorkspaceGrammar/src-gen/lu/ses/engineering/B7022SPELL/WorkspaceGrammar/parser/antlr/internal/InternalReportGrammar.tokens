@@ -1,0 +1,17 @@
+T__9=9
+RULE_ID=4
+RULE_WS=5
+RULE_TAB=7
+RULE_ANY_OTHER=8
+T__11=11
+T__12=12
+T__13=13
+T__14=14
+RULE_NL=6
+T__10=10
+':'=10
+'No Source found for'=13
+'procedure is called by:'=12
+'Procedure'=9
+'is called by:'=14
+'procedure calls the procedures:'=11

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.astra.spell.dev.feature"
+      label="SPELL Dev Feature"
+      version="4.6.1.qualifier"
+      provider-name="ASTRA">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.ui.navigator"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.core.net"/>
+      <import plugin="org.eclipse.core.expressions"/>
+      <import plugin="org.python.pydev"/>
+      <import plugin="org.python.pydev.core"/>
+      <import plugin="com.astra.ses.spell.dev.config" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.filebuffers"/>
+      <import plugin="org.tigris.subversion.subclipse.ui"/>
+      <import plugin="org.tigris.subversion.subclipse.core"/>
+      <import plugin="org.eclipse.team.ui"/>
+      <import plugin="org.eclipse.team.core"/>
+      <import plugin="com.astra.ses.spell.dev" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.astra.ses.spell.dev.database" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.astra.ses.spell.dev.spelleditor" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.core.resources" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="com.astra.ses.spell.language" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface.text" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="com.astra.ses.spell.dev.scheck" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.expressions" version="3.4.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.editors" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.ide" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.text" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="com.astra.ses.spell.dev.dictionaryeditor" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.python.pydev.shared_ui" version="2.8.2" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="com.astra.ses.spell.dev"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.activity.generic"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.activity.pydev"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.activity.subclipse"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.config"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.control.version"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.database"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.database.hifly"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.database.scorpio"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.database.test"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.database.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.dictionaryeditor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.documentation"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.scheck"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.scheck.dictionaries"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.scheck.functions"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.scheck.gotoc"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.scheck.header"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.scheck.sfpack1"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.scheck.sfunctions"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.scheck.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.dev.spelleditor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.astra.ses.spell.language"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

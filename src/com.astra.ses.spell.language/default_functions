@@ -1,0 +1,57 @@
+def Abort( message = None ):
+def DisplayStep( id, description ):
+def Finish( message = None ):
+def Prompt( *args, **kargs ):
+def Display( *args, **kargs ):
+def Notification( *args, **kargs ):
+def Event( *args, **kargs ):
+def GetTM( *args, **kargs ):
+def Verify( *args, **kargs ):
+def WaitFor( *args, **kargs ):
+def Pause( *args, **kargs ):
+def Send( *args, **kargs ):
+def BuildTC( *args, **kargs ):
+def SetGroundParameter( *args, **kargs ):
+def SetResource( *args, **kargs ):
+def GetResource( *args, **kargs ):
+def SetLink( *args, **kargs ):
+def CheckLink( *args, **kargs ):
+def StartTask( *args, **kargs ):
+def StopTask( *args, **kargs ):
+def UserLogin( *args, **kargs ):
+def UserLogout( *args, **kargs ):
+def StartProc( *args, **kargs ):
+def SetExecDelay( *args, **kargs ):
+def ShowText( *args, **kargs ):
+def GetTMparam( *args, **kargs ):
+def SetTMparam( *args, **kargs ):
+def GetLimits( *args, **kargs ):
+def SetLimits( *args, **kargs ):
+def LoadLimits( *args, **kargs ):
+def RestoreNormalLimits( *args, **kargs ):
+def DisableAlarm( *args, **kargs ):
+def EnableAlarm( *args, **kargs ):
+def LoadDictionary( *args, **kargs ):
+def SaveDictionary( *args, **kargs ):
+def CreateDictionary( *args, **kargs ):
+def AdjustLimits( *args, **kargs ):
+def OpenDisplay( *args, **kargs ):
+def CloseDisplay( *args, **kargs ):
+def PrintDisplay( *args, **kargs ):
+def Script( *args, **kargs ):
+def ChangeLanguageConfig( *args, **kargs ):
+def SetUserAction( *args, **kargs ):
+def EnableUserAction( *args, **kargs ):
+def DisableUserAction( *args, **kargs ):
+def DismissUserAction( *args, **kargs ):
+def bin( number, count = 24 ):
+def EnableAlignment( *args, **kargs ):
+def DisableAlignment( *args, **kargs ):
+def PerformAlignment( *args, **kargs ):
+def SetAlignmentMode( *args, **kargs ):
+def Open( *args, **kargs ):
+def Write( *args, **kargs ):
+def Close( *args, **kargs ):
+def Read( *args, **kargs ):
+def EnableRanging( *args, **kargs ):
+def DisableRanging ( *args, **kargs ):

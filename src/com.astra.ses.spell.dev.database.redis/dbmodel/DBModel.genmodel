@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.astra.ses.spell.dev.database.webapi/src" modelPluginID="com.astra.ses.spell.dev.database.webapi"
+    redirection="" modelName="DBModel" modelPluginClass="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    suppressInterfaces="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" publicConstructors="true" language="" interfaceNamePattern=""
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>DBModel.ecore</foreignModel>
+  <genPackages prefix="DbModel" basePackage="com.astra.ses.spell.dev.database.webapi"
+      disposableProviderFactory="true" ecorePackage="DBModel.ecore#/">
+    <genDataTypes ecoreDataType="DBModel.ecore#//ECollection">
+      <genTypeParameters ecoreTypeParameter="DBModel.ecore#//ECollection/E"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="DBModel.ecore#//DatabaseConnection"/>
+    <genDataTypes ecoreDataType="DBModel.ecore#//MonitoringCheck"/>
+    <genDataTypes ecoreDataType="DBModel.ecore#//DataOutputStream"/>
+    <genDataTypes ecoreDataType="DBModel.ecore#//ValidValueSet">
+      <genTypeParameters ecoreTypeParameter="DBModel.ecore#//ValidValueSet/E"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="DBModel.ecore#//CalibrationType"/>
+    <genClasses ecoreClass="DBModel.ecore#//WebAPIDatabase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPIDatabase/databasePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPIDatabase/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPIDatabase/version"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPIDatabase/telemetryParameterNames"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPIDatabase/telecommandNames"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPIDatabase/calibrationNames"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DBModel.ecore#//WebAPIDatabase/displays"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DBModel.ecore#//WebAPIDatabase/tmModels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPIDatabase/lastUpdateHash"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DBModel.ecore#//WebAPIDatabase/tcModels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DBModel.ecore#//WebAPIDatabase/calibrationModels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPIDatabase/dbConnection"/>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPIDatabase/isTelemetryParameter">
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPIDatabase/isTelemetryParameter/mnemonic"/>
+      </genOperations>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPIDatabase/isTelecommand">
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPIDatabase/isTelecommand/mnemonic"/>
+      </genOperations>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPIDatabase/isSequence">
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPIDatabase/isSequence/mnemonic"/>
+      </genOperations>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPIDatabase/getTelemetryModel">
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPIDatabase/getTelemetryModel/mnemonic"/>
+      </genOperations>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPIDatabase/getTelecommandModel">
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPIDatabase/getTelecommandModel/mnemonic"/>
+      </genOperations>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPIDatabase/getCalibrationModel">
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPIDatabase/getCalibrationModel/mnemonic"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DBModel.ecore#//WebAPIDisplays"/>
+    <genClasses ecoreClass="DBModel.ecore#//WebAPITelemetryModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPITelemetryModel/lastUpdateHash"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPITelemetryModel/measuringUnit"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPITelemetryModel/calibrations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DBModel.ecore#//WebAPITelemetryModel/calibration"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPITelemetryModel/defaultCalibrationId"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPITelemetryModel/monitoringChecks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DBModel.ecore#//WebAPITelemetryModel/database"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPITelemetryModel/loaded"/>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPITelemetryModel/addCalibration">
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPITelemetryModel/addCalibration/calibrationId"/>
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPITelemetryModel/addCalibration/defaultRepresentation"/>
+      </genOperations>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPITelemetryModel/serialize">
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPITelemetryModel/serialize/stream"/>
+      </genOperations>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPITelemetryModel/loadParsed"/>
+    </genClasses>
+    <genClasses ecoreClass="DBModel.ecore#//WebAPITelecommandModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPITelecommandModel/critical"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DBModel.ecore#//WebAPITelecommandModel/arguments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DBModel.ecore#//WebAPITelecommandModel/database"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPITelecommandModel/loaded"/>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPITelecommandModel/serialize">
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPITelecommandModel/serialize/stream"/>
+      </genOperations>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPITelecommandModel/loadParsed"/>
+    </genClasses>
+    <genClasses ecoreClass="DBModel.ecore#//WebAPICalibrationModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPICalibrationModel/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPICalibrationModel/identifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPICalibrationModel/cachedWebAPIData"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPICalibrationModel/validValues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DBModel.ecore#//WebAPICalibrationModel/internalValidValues"/>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPICalibrationModel/serialize">
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPICalibrationModel/serialize/stream"/>
+      </genOperations>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPICalibrationModel/getCalibrated">
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPICalibrationModel/getCalibrated/rawValue"/>
+      </genOperations>
+      <genOperations ecoreOperation="DBModel.ecore#//WebAPICalibrationModel/isValidValue">
+        <genParameters ecoreParameter="DBModel.ecore#//WebAPICalibrationModel/isValidValue/engValue"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DBModel.ecore#//WebAPITelecommandArgument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPITelecommandArgument/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPITelecommandArgument/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//WebAPITelecommandArgument/loaded"/>
+    </genClasses>
+    <genClasses ecoreClass="DBModel.ecore#//DatabaseElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//DatabaseElement/fullName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//DatabaseElement/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//DatabaseElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//DatabaseElement/cachedWebAPIData"/>
+    </genClasses>
+    <genClasses ecoreClass="DBModel.ecore#//StringToTMMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//StringToTMMapEntry/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DBModel.ecore#//StringToTMMapEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="DBModel.ecore#//StringToTCMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//StringToTCMapEntry/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DBModel.ecore#//StringToTCMapEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="DBModel.ecore#//StringToCalMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DBModel.ecore#//StringToCalMapEntry/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DBModel.ecore#//StringToCalMapEntry/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

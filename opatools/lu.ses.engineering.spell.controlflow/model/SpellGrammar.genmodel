@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/lu.ses.engineering.spell.controlflow/src" editDirectory="/lu.ses.engineering.spell.controlflow.edit/src"
+    editorDirectory="/lu.ses.engineering.spell.controlflow.editor/src" modelPluginID="lu.ses.engineering.spell.controlflow"
+    forceOverwrite="true" modelName="SpellGrammar" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="lu.ses.engineering.spell.controlflow.edit"
+    editorPluginID="lu.ses.engineering.spell.controlflow.editor" runtimeVersion="2.9">
+  <genPackages prefix="Spell" basePackage="lu.ses.engineering.spell.controlflow" disposableProviderFactory="true"
+      fileExtensions="py" ecorePackage="SpellGrammar.ecore#/">
+    <genClasses ecoreClass="SpellGrammar.ecore#//single_input">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//single_input/stmt"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//file_input">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//file_input/stmts"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//eval_input">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//eval_input/testlist"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//decorator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//decorator/dotted_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//decorator/roundBracket"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//decorator/arglist"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//decorators">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//decorators/decorators"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//decorated">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//decorated/decorators"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//decorated/def"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//funcdef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//funcdef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//funcdef/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//funcdef/suite"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//parameters">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//parameters/varargslist"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//varargslist_element">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//varargslist_element/fpdef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//varargslist_element/test"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//varargslist">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//varargslist/varargs1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//varargslist/dot1Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//varargslist/dot2Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//varargslist/dot3Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//varargslist/vararg2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//varargslist/varargs3"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//varargslist/additionalComma"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//fpdef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//fpdef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//fpdef/fplist"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//fplist">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//fplist/def1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//fplist/definitions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//fplist/optionalSemicolon"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//stmt"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//simple_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//simple_stmt/stmt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//simple_stmt/additionalComma"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//small_stmt"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//expr_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//expr_stmt/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//expr_stmt/symbol"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//expr_stmt/right"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//yield_or_testlist"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//del_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//del_stmt/exprlist"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//pass_stmt"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//flow_stmt"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//break_stmt"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//continue_stmt"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//return_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//return_stmt/testlist"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//yield_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//yield_stmt/yield_expr"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//raise_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//raise_stmt/tests"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//import_stmt"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//import_name">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//import_name/dotted_as_names"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//import_from">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//import_from/dots"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//import_from/dotted_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//import_from/dots2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//import_from/roundBracket"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//import_from/import_as_names"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//import_as_name">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//import_as_name/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//import_as_name/identifier"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//dotted_as_name">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//dotted_as_name/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//dotted_as_name/identifier"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//import_as_names">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//import_as_names/imports"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//import_as_names/optionalComma"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//dotted_as_names">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//dotted_as_names/dotted_names"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//global_stmt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//global_stmt/globals"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//exec_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//exec_stmt/expr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//exec_stmt/tests"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//assert_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//assert_stmt/assers"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//compound_stmt"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//else_if_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//else_if_stmt/test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//else_if_stmt/suite"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//if_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//if_stmt/test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//if_stmt/suite"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//if_stmt/else_if_stmts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//if_stmt/else"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//while_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//while_stmt/test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//while_stmt/suite"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//while_stmt/else"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//for_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//for_stmt/exprlist"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//for_stmt/testlist"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//for_stmt/suite"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//for_stmt/else"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//try_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//try_stmt/suite"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//try_stmt/except_clause"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//try_stmt/else"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//try_stmt/finally"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//with_stmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//with_stmt/with_item"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//with_stmt/suite"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//with_item">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//with_item/test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//with_item/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//except_clause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//except_clause/test"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//except_clause/sign"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//except_clause/next_test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//except_clause/suite"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//suite">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//suite/stmts"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//testlist_safe">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//testlist_safe/old_test"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//testlist_safe/optionalComa"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//test">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//test/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//test/if_test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//test/if_else_test"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//or_test">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//or_test/sign"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//or_test/right"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//and_test"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//not_test">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//not_test/not"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//not_test/comparison"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//comparison">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//comparison/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//comparison/comp_op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//comparison/right"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//expr">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//expr/sign"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//xor_expr"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//and_expr"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//shift_expr"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//arith_expr"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//term"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//factor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//factor/factor_or_power"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//factor_or_power"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//power">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//power/atom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//power/trailer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//power/factor"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//yield_or_testlist_comp"/>
+    <genClasses ecoreClass="SpellGrammar.ecore#//atom">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//atom/roundBracket"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//atom/yield_or_testlist_comp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//atom/squareBracket"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//atom/listmaker"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//atom/curlyBracket"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//atom/dictorsetmaker"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//atom/testlist1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//atom/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//atom/strings"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//listmaker">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//listmaker/test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//listmaker/list_for"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//listmaker/additionalTests"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//listmaker/optionalComma"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//testlist_comp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//testlist_comp/test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//testlist_comp/comp_for"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//testlist_comp/additionalTests"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//testlist_comp/optionalComma"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//lambdef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//lambdef/varargslist"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//lambdef/test"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//trailer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//trailer/roundBracket"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//trailer/arglist"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//trailer/squareBracket"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//trailer/subscriptlist"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//trailer/dotName"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//subscriptlist">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//subscriptlist/subscript"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//subscriptlist/optionalComma"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//subscript">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//subscript/test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//subscript/subscript1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//subscript/subscript2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//subscript/sliceop"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//sliceop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//sliceop/test"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//exprlist">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//exprlist/exprs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//exprlist/optionalComma"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//testlist">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//testlist/tests"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//testlist/optionalComma"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//dictorset_entry">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//dictorset_entry/test1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//dictorset_entry/test2"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//dictorsetmaker">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//dictorsetmaker/entries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//dictorsetmaker/comp_for"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//dictorsetmaker/optionalComma"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//dictorsetmaker/tests"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//classdef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//classdef/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//classdef/roundBrackets"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//classdef/testlist"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//classdef/suite"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//arglist">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//arglist/arguments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//arglist/argument"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpellGrammar.ecore#//arglist/optionalComma"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//arglist/dot1_test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//arglist/dot1_arguments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//arglist/dot2_test"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//argument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//argument/test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//argument/comp_for"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//argument/test1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//argument/test2"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//list_iter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//list_iter/list_iter"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//list_for">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//list_for/exprlist"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//list_for/testlist_safe"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//list_if">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//list_if/old_test"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//comp_iter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//comp_iter/comp_iter"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//comp_for">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//comp_for/exprlist"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//comp_for/or_test"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//comp_if">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//comp_if/test"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//testlist1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//testlist1/tests"/>
+    </genClasses>
+    <genClasses ecoreClass="SpellGrammar.ecore#//yield_expr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpellGrammar.ecore#//yield_expr/testlist"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

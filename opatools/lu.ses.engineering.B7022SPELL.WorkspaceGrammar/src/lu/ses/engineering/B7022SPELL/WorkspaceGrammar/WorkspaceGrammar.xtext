@@ -1,0 +1,55 @@
+grammar lu.ses.engineering.B7022SPELL.WorkspaceGrammar.ReportGrammar
+
+//generate workspaceGrammar "http://www.ses.lu/engineering/B7022Spell/WorkspaceGrammar"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.ses.com/workspace"
+
+Workspace:
+	((procedures+=EStringToLayoutMapEntry)*)
+	| Layout
+;
+
+EStringToLayoutMapEntry:
+	key=ID 
+	value=Layout
+;
+Layout returns Layout:
+	{Layout}
+	
+	('Procedure' WS name=ID ':' NL
+		(
+			TAB 'procedure calls the procedures:' NL
+			(TAB TAB calls+=[Layout] NL)*
+		)
+		(
+			TAB 'procedure is called by:' NL
+			(TAB TAB isCalled+=[Layout] NL)*
+		
+		)
+	) |
+	=>(
+		missing?='No Source found for' WS name=ID ':' NL
+		(
+			TAB 'is called by:' NL
+			(TAB TAB isCalled+=[Layout] NL)*
+	
+		)
+		
+	)	
+;
+
+	
+	
+
+terminal ID  		: (!('\t'|' '|'\r'|'\n'))+;
+
+
+terminal TAB : ('\t')+
+	
+;
+terminal WS			: (' ')+;
+
+terminal NL :		('\r'|'\n')+
+	
+;
+terminal ANY_OTHER: .;

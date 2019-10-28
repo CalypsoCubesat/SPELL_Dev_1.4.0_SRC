@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SPELL Development Plug-in
+Bundle-SymbolicName: com.astra.ses.spell.dev;singleton:=true
+Bundle-Version: 4.6.1.qualifier
+Bundle-Activator: com.astra.ses.spell.dev.Activator
+Require-Bundle: 
+ org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.ui.navigator,
+ org.eclipse.ui.ide,
+ org.eclipse.core.resources,
+ org.eclipse.core.net,
+ org.eclipse.core.expressions,
+ org.python.pydev,
+ org.python.pydev.core,
+ com.astra.ses.spell.dev.config;bundle-version="1.0.0",
+ org.eclipse.core.filebuffers,
+ org.apache.batik.css;bundle-version="1.6.0",
+ org.python.pydev.shared_ui;bundle-version="6.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: SES Engineering, Luxembourg S.a.r.l.
+Export-Package: com.astra.ses.spell.dev,
+ com.astra.ses.spell.dev.advisor,
+ com.astra.ses.spell.dev.commands,
+ com.astra.ses.spell.dev.perspective,
+ com.astra.ses.spell.dev.preferences,
+ com.astra.ses.spell.dev.properties,
+ com.astra.ses.spell.dev.resources.builder,
+ com.astra.ses.spell.dev.resources.nature,
+ com.astra.ses.spell.dev.startup,
+ com.astra.ses.spell.dev.views,
+ com.astra.ses.spell.dev.views.explorer,
+ com.astra.ses.spell.dev.views.explorer.contents,
+ com.astra.ses.spell.dev.wizards,
+ com.astra.ses.spell.dev.wizards.extensions,
+ com.astra.ses.spell.dev.wizards.pages,
+ com.astra.ses.spell.dev.workspace,
+ com.astra.ses.spell.dev.workspace.exception

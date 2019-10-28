@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/lu.ses.engineering.B7022SPELL.TmDisplayPages/src"
+    modelPluginID="lu.ses.engineering.B7022SPELL.TmDisplayPages" modelName="PageModel"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>PageModel.xsd</foreignModel>
+  <genPackages prefix="Views" basePackage="es.gmv" resource="XML" disposableProviderFactory="true"
+      ecorePackage="views.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="views.ecore#//FontStyle">
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//FontStyle/NORMAL"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//FontStyle/BOLD"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//FontStyle/ITALIC"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="views.ecore#//ColorType"/>
+    <genDataTypes ecoreDataType="views.ecore#//FamilyType"/>
+    <genDataTypes ecoreDataType="views.ecore#//FontStyleObject"/>
+    <genClasses ecoreClass="views.ecore#//AndColumn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//AndColumn/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//AndColumn/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//AndColumn/width"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//DisplayRenderingType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//DisplayRenderingType/background"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//DisplayRenderingType/foreground"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//DisplayRenderingType/font"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference views.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference views.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//DocumentRoot/xmltabulardisplaydefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//FontType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//FontType/family"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//FontType/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//FontType/style"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//MetaInformation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//MetaInformation/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//MetaInformation/keyword"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//MetaInformation/date"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//MetaInformation/parameterList"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//ParameterList">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//ParameterList/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//Row">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Row/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Row/note"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Row/representation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Row/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Row/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="views.ecore#//Xmldisplaydefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Xmldisplaydefinition/metaInformation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Xmldisplaydefinition/identifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Xmldisplaydefinition/kindOfDisplay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Xmldisplaydefinition/version"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//Xmltabulardisplaydefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Xmltabulardisplaydefinition/scrollable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Xmltabulardisplaydefinition/column"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Xmltabulardisplaydefinition/row"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

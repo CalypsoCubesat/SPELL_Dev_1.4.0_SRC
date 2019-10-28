@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="lu.ses.engineering.spell.SpellDatabase.sdk"
+      label="SpellDatabase SDK Feature "
+      version="1.0.1.qualifier"
+      provider-name="SES">
+
+   <requires>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="com.astra.ses.spell.dev"/>
+      <import plugin="org.eclipse.xtext" version="2.7.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.util" version="2.7.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore" version="2.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.common" version="2.9.0" match="greaterOrEqual"/>
+      <import plugin="org.antlr.runtime" version="3.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.common.types" version="2.7.0" match="greaterOrEqual"/>
+      <import plugin="com.astra.ses.spell.dev.database"/>
+      <import plugin="org.eclipse.rcp"/>
+      <import plugin="com.astra.ses.spell.dev.config" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.astra.ses.spell.dev.dictionaryeditor" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.log4j"/>
+      <import plugin="org.eclipse.xtext.xbase.lib" version="2.7.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.ui" version="2.7.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.xtext.ui.shared" version="2.7.0" match="compatible"/>
+      <import plugin="org.eclipse.xtext.builder" version="2.7.0" match="compatible"/>
+      <import plugin="org.eclipse.xtext.common.types.ui"/>
+      <import plugin="org.eclipse.xtext.ui.codetemplates.ui"/>
+      <import plugin="org.eclipse.compare"/>
+      <import plugin="com.astra.ses.spell.dev" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.astra.ses.spell.dev.database.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.astra.ses.spell.dev.spelleditor" version="1.0.0" match="greaterOrEqual"/>
+      <import feature="lu.ses.engineering.depend.feature" version="1.0.0.qualifier"/>
+   </requires>
+
+   <plugin
+         id="lu.ses.engineering.spell.SpellDatabase"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="lu.ses.engineering.spell.SpellDatabase.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

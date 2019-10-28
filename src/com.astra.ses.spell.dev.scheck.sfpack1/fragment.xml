@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<fragment>
+   <extension point="com.astra.ses.spell.dev.scheck.SpellCallChecker">
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="AbortRanging checker"
+            spellFunction="AbortRanging">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="Abort checker"
+            spellFunction="Abort">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="AddSharedDataScope checker"
+            spellFunction="AddSharedDataScope">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="BuildTC checking rule registration"
+            name="BuildTC checker"
+            spellFunction="BuildTC">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="ClearSharedDataScopes checker"
+            spellFunction="ClearSharedDataScopes">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="ClearSharedData checker"
+            spellFunction="ClearSharedData">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="CloseDisplay checker"
+            spellFunction="CloseDisplay">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="CloseFile checker"
+            spellFunction="CloseFile">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="CloseWorkspace checker"
+            spellFunction="CloseWorkspace">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="CompareMemoryImages checker"
+            spellFunction="CompareMemoryImages">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="CreateDictionary checker"
+            spellFunction="CreateDictionary">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="DeleteFile checker"
+            spellFunction="DeleteFile">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="DisableAlarm checker"
+            spellFunction="DisableAlarm">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="DisableRanging checker"
+            spellFunction="DisableRanging">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="DisableUserAction"
+            spellFunction="DisableUserAction">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="DismissUserAction checker"
+            spellFunction="DismissUserAction">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="DisplayStep checker"
+            spellFunction="DisplayStep">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="Display checker"
+            spellFunction="Display">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="EnableAlarm checker"
+            spellFunction="EnableAlarm">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="EnableRanging checker"
+            spellFunction="EnableRanging">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="EnableUserAction checker"
+            spellFunction="EnableUserAction">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="Event checker"
+            spellFunction="Event">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="Finish checker"
+            spellFunction="Finish">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="GenerateMemoryReport checker"
+            spellFunction="GenerateMemoryReport">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="GetAntennaNames checker"
+            spellFunction="GetAntennaNames">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="GetBasebandNames checker"
+            spellFunction="GetBasebandNames">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="GetLimits checker"
+            spellFunction="GetLimits">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="GetRangingStatus checker"
+            spellFunction="GetRangingStatus">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="GetResource checker"
+            spellFunction="GetResource">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="GetSharedDataKeys checker"
+            spellFunction="GetSharedDataKeys">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="GetSharedDataScopes checker"
+            spellFunction="GetSharedDataScopes">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="GetSharedData checker"
+            spellFunction="GetSharedData">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="GetTM checker"
+            spellFunction="GetTM">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="GetTMparam checker"
+            spellFunction="GetTMparam">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="Goto checker"
+            spellFunction="Goto">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="IsAlarmed checker"
+            spellFunction="IsAlarmed">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="LoadDictionary checker"
+            spellFunction="LoadDictionary">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="LoadLimits checker"
+            spellFunction="LoadLimits">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="MemoryLookup checker"
+            spellFunction="MemoryLookup">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="Notify checker"
+            spellFunction="Notify">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="OpenDisplay checker"
+            spellFunction="OpenDisplay">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="OpenFile checker"
+            spellFunction="OpenFile">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="OpenWorkspace checker"
+            spellFunction="OpenWorkspace">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="Pause checker"
+            spellFunction="Pause">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="PrintDisplay checker"
+            spellFunction="PrintDisplay">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="Prompt checker"
+            spellFunction="Prompt">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="ReadDirectory checker"
+            spellFunction="ReadDirectory">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="ReadFile checker"
+            spellFunction="ReadFile">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="RestoreNormalLimits checker"
+            spellFunction="RestoreNormalLimits">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="SaveDictionary checker"
+            spellFunction="SaveDictionary">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="Send checker"
+            spellFunction="Send">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="SetBasebandConfig checker"
+            spellFunction="SetBasebandConfig">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="SetGroundParameter checker"
+            spellFunction="SetGroundParameter">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="SetLimits checker"
+            spellFunction="SetLimits">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="SetResource checker"
+            spellFunction="SetResource">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="SetSharedData checker"
+            spellFunction="SetSharedData">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="SetTMparam checker"
+            spellFunction="SetTMparam">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="SetUserAction checker"
+            spellFunction="SetUserAction">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="StartProc checker"
+            spellFunction="StartProc">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="StartRangingCalibration checker"
+            spellFunction="StartRangingCalibration">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="StartRanging checker"
+            spellFunction="StartRanging">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="Step checker"
+            spellFunction="Step">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="TMTCLookup checker"
+            spellFunction="TMTCLookup">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="Verify checker"
+            spellFunction="Verify">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="WaitFor checker"
+            spellFunction="WaitFor">
+      </SpellFunctionChecker>
+
+      <SpellFunctionChecker
+            description="Checking rule registration"
+            name="WriteFile checker"
+            spellFunction="WriteFile">
+      </SpellFunctionChecker>
+
+   </extension>
+
+</fragment>

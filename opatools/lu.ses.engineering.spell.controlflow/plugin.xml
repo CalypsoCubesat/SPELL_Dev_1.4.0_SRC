@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated SpellGrammar -->
+      <package
+            uri="http://lu.ses.engineering.controlflow.grammar"
+            class="lu.ses.engineering.spell.controlflow.spell.SpellPackage"
+            genModel="model/SpellGrammar.genmodel"/>
+   </extension>
+
+</plugin>

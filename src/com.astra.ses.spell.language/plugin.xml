@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.python.pydev.pydev_formatter">
+      <formatter_participant
+            class="com.astra.ses.spell.language.SpellFormatter">
+      </formatter_participant>
+   </extension>
+   <extension
+         point="org.python.pydev.pydev_python_module_resolver">
+      <module_resolver
+            class="com.astra.ses.spell.language.resolver.SpellModuleResolver">
+      </module_resolver>
+   </extension>
+   <extension
+         point="org.python.pydev.pydev_hover2">
+      <pyTextHover
+            activate="true"
+            class="com.astra.ses.spell.language.dbHover.SPELLDBHover"
+            enable="true"
+            id="com.astra.ses.spell.language.dbHover"
+            label="dbHover"
+            preempt="true"
+            priority="100">
+      </pyTextHover>
+   </extension>
+   <extension
+         point="org.python.pydev.pydev_completion">
+      <completion_participant
+            class="com.astra.ses.spell.language.code_completion.SPELLCodeCompletion">
+      </completion_participant>
+   </extension> 
+</plugin>

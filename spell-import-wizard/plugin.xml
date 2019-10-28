@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.importWizards">
+      <category
+            name="SES"
+            id="com.astra.ses.spell.dev.wizard.importWizards.SES">
+      </category>
+      <wizard
+            name="Import Spacecraft Project"
+            icon="icons/sample.gif"
+            category="com.astra.ses.spell.dev.wizard.importWizards.SES"
+            class="com.astra.ses.spell.dev.wizard.importWizards.ImportWizard"
+            id="com.astra.ses.spell.dev.wizard.importWizards.ImportWizard">
+         <description>
+            Import a file from the local file system into the workspace.
+         </description>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="com.astra.ses.spell.dev.wizard.category"
+            defaultHandler="com.astra.ses.spell.dev.wizard.importWizards.OpenImportWizardCommandHandler"
+            id="com.astra.ses.spell.dev.wizard.importWizards.OpenImportWizard"
+            name="Open SES Spacecraft Import Wizard">
+      </command>
+      <category
+            id="com.astra.ses.spell.dev.wizard.category"
+            name="SPELL Git Help">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+      <cheatsheet
+            category="org.eclipse.egit.cheatsheets"
+            contentFile="cheatsheets/clone_trouble.xml"
+            id="org.eclipse.egit.cheatsheets.clone_trouble"
+            name="Troubleshoot Git problems">
+         <description>
+            %cheatsheet.clone.desc
+         </description>
+      </cheatsheet>
+   </extension>
+   <extension 
+         point="org.eclipse.help.contexts">
+      <contexts plugin="com.astra.ses.spell.dev.wizard"
+            file="contexts.xml">
+      </contexts>
+      <contextProvider
+            class="com.astra.ses.spell.dev.wizard.AbstractContextProvider1">
+      </contextProvider>
+   </extension>
+
+</plugin>
